@@ -1,0 +1,18 @@
+import random
+
+numero_secreto = random.randint(0, 99)
+
+intentos = 0
+
+while True:
+    intento = int(input("Ingresa un número entre 0 y 99: "))
+    
+    intentos += 1
+    
+    if intento == numero_secreto:
+        print(F"¡Felicidades! Adivinaste el número en {intentos} intentos.")
+        break
+    elif intento < numero_secreto:
+        print("El número es mayor. Intenta de nuevo.")
+    else:
+        print("El número es menor. Intenta de nuevo.")
